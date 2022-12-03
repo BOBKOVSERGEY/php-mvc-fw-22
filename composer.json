@@ -1,0 +1,15 @@
+{
+    "name": "bobko/php-mvc-fw-22",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "SERGEYBOBKOV",
+            "email": "sergey_bobkov@inbox.ru"
+        }
+    ],
+    "require": {}
+}
