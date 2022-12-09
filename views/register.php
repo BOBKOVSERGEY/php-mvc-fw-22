@@ -1,11 +1,25 @@
+
+<?php
+use app\core\form\Form;
+?>
 <h1>Create an account</h1>
-<form method="post" action="">
+<?php $form =  Form::begin('', 'post'); ?>
+<?php echo $form->field($model, 'firstname'); ?>
+<?php echo $form->field($model, 'lastname'); ?>
+<?php echo $form->field($model, 'email'); ?>
+<?php echo $form->field($model, 'password'); ?>
+<?php echo $form->field($model, 'confirmPassword'); ?>
+<button type="submit" class="btn btn-primary">Register</button>
+<a href="/login">Already have an account?</a>
+<?php Form::end(); ?>
+
+<!--<form method="post" action="">
     <div class="mb-3">
-        <label for="fistname" class="form-label">First Name</label>
+        <label for="firstname" class="form-label">First Name</label>
         <input type="text"
                class="form-control"
-               id="fistname"
-               name="fistname" aria-describedby="emailHelp">
+               id="firstname"
+               name="firstname" aria-describedby="emailHelp">
     </div>
     <div class="mb-3">
         <label for="lastname" class="form-label">Last Name</label>
@@ -16,7 +30,7 @@
     </div>
     <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email"
+        <input type="text"
                class="form-control"
                id="email"
                name="email" aria-describedby="emailHelp">
@@ -39,5 +53,5 @@
 
     <button type="submit" class="btn btn-primary">Register</button>
   <a href="/login">Already have an account?</a>
-</form>
+</form>-->
 
