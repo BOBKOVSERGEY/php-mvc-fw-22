@@ -11,5 +11,8 @@
             "email": "sergey_bobkov@inbox.ru"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-pdo": "*",
+        "vlucas/phpdotenv": "^5.5"
+    }
 }

@@ -7,12 +7,14 @@ class Application
     public static string $ROOT_DIR;
     public Request $request;
     public Router $router;
+    public Database $db;
     public Response $response;
     public static Application $app;
     public Controller $controller;
 
     public function __construct(
-        $routePath
+        $routePath,
+        array $config
     )
     {
         self::$ROOT_DIR = $routePath;
@@ -20,6 +22,8 @@ class Application
         $this->request = new Request();
         $this->response = new Response();
         $this->router = new Router($this->request, $this->response);
+
+        $this->db = new Database($config['db']);
     }
 
     public function run(): void
