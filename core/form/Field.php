@@ -35,7 +35,7 @@ class Field
                                      </div>  
                                 </div>',
             $this->attribute,
-            ucfirst($this->attribute),
+            $this->model->getLabel($this->attribute) ?? ucfirst($this->attribute),
             $this->typeField($this->attribute),
             $this->model->hasError($this->attribute) ? ' is-invalid' : '',
             $this->attribute,
